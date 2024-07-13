@@ -1,0 +1,65 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  box-shadow: 3px 0px 0px 1px #222325;
+  justify-content: space-between;
+
+  &__logo {
+    font-weight: 700;
+    font-family: Catamaran;
+    font-size: 38px;
+  }
+
+  &__LinkContainer {
+    display: flex;
+  }
+
+  &__loginButton {
+    text-decoration: none;
+    color: #222325;
+    font-weight: 700;
+    padding: 10px 20px;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    padding-bottom: 7px;
+  }
+
+  &__registrationButton {
+    text-decoration: none;
+    background-color: #222325;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    padding-bottom: 7px;
+  }
+}
+@media (hover: hover) {
+  .navbar {
+    &__registrationButton {
+      transition: 0.7s;
+      &:hover {
+        color: #222325;
+        background-color: #fff;
+      }
+    }
+    &__loginButton {
+      transition: 0.7s;
+      &:hover {
+        color: #fff;
+        background-color: #222325;
+      }
+    }
+  }
+}
