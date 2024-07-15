@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/slices/userSlice";
+import { openModal } from "../../redux/slices/modalSlice";
 
 const Navbar = () => {
   const isAuth = useSelector((state) => state.user.isAuth);
@@ -16,17 +16,20 @@ const Navbar = () => {
       <p className={styles.navbar__logo}>Storeify</p>
       <div className={styles.navbar__LinkContainer}>
         {!isAuth && (
-          <NavLink to="/login" className={styles.navbar__loginButton}>
+          <button
+            className={styles.navbar__loginButton}
+            onClick={() => dispatch(openModal("login"))}
+          >
             Log In
-          </NavLink>
+          </button>
         )}
         {!isAuth && (
-          <NavLink
-            to="/registration"
+          <button
             className={styles.navbar__registrationButton}
+            onClick={() => dispatch(openModal("registration"))}
           >
             Get Started
-          </NavLink>
+          </button>
         )}
         {isAuth && (
           <button

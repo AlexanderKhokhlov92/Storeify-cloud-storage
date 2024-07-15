@@ -1,0 +1,15 @@
+.file {
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  &__logo {
+    display: block;
+    order: -1;
+  }
+  &__nameContainer {
+    display: flex;
+  }
+  &__nameTitle {
+    margin-left: 10px;
+  }
+}

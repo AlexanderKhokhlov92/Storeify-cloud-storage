@@ -1,0 +1,80 @@
+.authorization {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  &__title {
+    margin-top: 140px;
+    font-size: 48px;
+  }
+  &__descripton {
+    color: #79797b;
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  &__input {
+    margin-top: 30px;
+    &:last-of-type {
+      margin-top: 20px;
+    }
+  }
+  &__button {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 14px;
+  }
+  &__prompt {
+    color: #79797b;
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  &__loginLink {
+    text-decoration: none;
+    font-weight: 700;
+    color: #222325;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+  }
+}
+
+@media (hover: hover) {
+  .authorization {
+    &__loginLink {
+      transition: 0.7s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .authorization {
+    padding-left: 20px;
+    padding-right: 20px;
+    &__title {
+      margin-top: 40px;
+      font-size: 34px;
+    }
+    &__input {
+      margin-top: 60px;
+      &:last-of-type {
+        margin-top: 20px;
+      }
+    }
+    &__descripton {
+      font-size: 18px;
+      margin-top: 60px;
+    }
+    &__prompt {
+      font-size: 15px;
+      margin-top: 30px;
+    }
+    &__loginLink {
+      font-size: 15px;
+    }
+  }
+}

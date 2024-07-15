@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./navbar/Navbar";
 import WelcomePage from "../pages/welcomePage/WelcomePage";
-import Login from "./login/Login";
-import Registration from "./registration/Registration";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { auth } from "../services/userService";
+import Modal from "./modal/Modal";
+import MainPage from "../pages/diskPage/MainPage";
 
 function App() {
   const isAuth = useSelector((state) => state.user.isAuth);
@@ -22,13 +22,16 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <Navbar />
-        {!isAuth && (
+        {!isAuth ? (
           <Routes>
             <Route path="/" Component={WelcomePage} />
-            <Route path="/login" Component={Login} />
-            <Route path="/registration" Component={Registration} />
+          </Routes>
+        ) : (
+          <Routes>
+            <Route path="/" Component={MainPage} />
           </Routes>
         )}
+        <Modal />
       </div>
     </BrowserRouter>
   );

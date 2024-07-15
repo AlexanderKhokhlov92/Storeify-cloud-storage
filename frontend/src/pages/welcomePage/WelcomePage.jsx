@@ -1,7 +1,11 @@
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import styles from "./WelcomePage.module.scss";
+import { openModal } from "../../redux/slices/modalSlice";
+import Button from "../../components/UI/button/Button";
 
 const WelcomePage = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className={styles.welcomePage}>
       <h1 className={styles.welcomePage__title}>
@@ -14,21 +18,24 @@ const WelcomePage = () => {
         Save your photos and access them from any device, anywhere
       </p>
       <div className={styles.welcomePage__buttonWrapper}>
-        <Link
+        <Button
+          onClick={() => dispatch(openModal("registration"))}
           className={styles.welcomePage__registrationButton}
-          to="/registration"
         >
           Get Started for Free
-        </Link>
-        <Link className={styles.welcomePage__plansButton} to="">
+        </Button>
+        <Button variant="inverse" className={styles.welcomePage__plansButton}>
           Plans and Pricing
-        </Link>
+        </Button>
       </div>
       <p className={styles.welcomePage__loginPrompt}>
         Already have Storeify?{" "}
-        <Link className={styles.welcomePage__loginLink} to="/login">
+        <button
+          className={styles.welcomePage__loginLink}
+          onClick={() => dispatch(openModal("login"))}
+        >
           Log In
-        </Link>
+        </button>
       </p>
     </div>
   );

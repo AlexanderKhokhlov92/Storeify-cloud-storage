@@ -80,6 +80,7 @@ router.post(
       const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
         expiresIn: "1h",
       });
+
       return res.json({
         token,
         user: {
@@ -105,6 +106,7 @@ router.get("/auth", authMiddleware, async (req, res) => {
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
+
     return res.json({
       token,
       user: {

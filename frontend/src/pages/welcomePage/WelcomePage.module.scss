@@ -33,20 +33,11 @@
   }
 
   &__registrationButton {
-    text-decoration: none;
-    background-color: #222325;
-    color: #fff;
-    font-weight: 700;
     padding: 20px 30px;
-    line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
     padding-bottom: 18px;
-    border: 2px solid #222325;
+    font-size: 18px;
   }
+
   &__plansButton {
     text-decoration: none;
     background-color: #fff;
@@ -63,6 +54,7 @@
     margin-left: 10px;
     border: 2px solid #222325;
   }
+
   &__loginPrompt {
     font-size: 18px;
     margin-top: 30px;
@@ -73,27 +65,14 @@
     font-weight: 700;
     color: #222325;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
   }
 }
 
 @media (hover: hover) {
   .welcomePage {
-    &__registrationButton {
-      transition: 0.7s;
-      &:hover {
-        color: #222325;
-        background-color: #fff;
-      }
-    }
-
-    &__plansButton {
-      transition: 0.7s;
-      &:hover {
-        color: #fff;
-        background-color: #222325;
-      }
-    }
-
     &__loginLink {
       transition: 0.7s;
       &:hover {

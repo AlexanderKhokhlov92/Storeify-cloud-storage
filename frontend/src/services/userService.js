@@ -28,7 +28,6 @@ export const login = (email, password) => {
       );
       dispatch(setUser(response.data.user));
       localStorage.setItem("token", response.data.token);
-      console.log(response.data);
     } catch (error) {
       alert(error);
     }
@@ -43,7 +42,6 @@ export const auth = () => {
       });
       dispatch(setUser(response.data.user));
       localStorage.setItem("token", response.data.token);
-      console.log(response.data);
     } catch (error) {
       alert(error);
       localStorage.removeItem("token");
