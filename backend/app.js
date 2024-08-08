@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const fileUpload = require("express-fileupload");
 
 const authRouter = require("./routes/authRoutes");
 const fileRouter = require("./routes/fileRoutes");
@@ -10,6 +11,7 @@ const app = express();
 const PORT = process.env.PORT;
 const DB_URL = process.env.DB_URL;
 
+app.use(fileUpload({}));
 app.use(corsMiddleware);
 app.use(express.json());
 app.use("/api/auth", authRouter);

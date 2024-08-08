@@ -1,10 +1,15 @@
 .mainPage {
-  padding-left: 40px;
-  padding-right: 4px;
   display: grid;
-  grid-template-columns: 171.98px 1fr;
-  &__createDir {
-  }
-  &__buttonList {
+  grid-template-columns: 211.98px 1fr;
+  color: #79797b;
+
+  &__dropArea {
+    width: 80%;
+    height: calc(100vh - 50px - 40px);
+    margin: 20px;
+    border: dashed 2px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

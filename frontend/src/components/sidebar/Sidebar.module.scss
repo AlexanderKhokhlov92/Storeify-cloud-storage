@@ -1,0 +1,18 @@
+.sidebar {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+
+  &__uploadInput {
+    display: none;
+  }
+
+  &__uploadLabel {
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    background-color: tomato;
+    display: block;
+  }
+}

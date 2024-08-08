@@ -1,6 +1,24 @@
 .fileList {
-  margin-top: 102.4px;
-  margin-left: 40px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
+  font-family: "Catamaran";
+  &__title {
+    grid-column: span 4;
+    margin-top: 30px;
+    color: #535258;
+  }
+  &__wrapper {
+    grid-column-start: 2;
+    margin-left: 20px;
+    color: #6e6d72;
+  }
+  &__fileInfo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 10px;
+    font-family: "Catamaran";
+    padding-left: 22px;
+    background-color: #f8f8f8;
+    margin-top: 20px;
+  }
 }

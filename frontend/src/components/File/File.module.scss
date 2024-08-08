@@ -2,14 +2,30 @@
   grid-column: span 4;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
+  border: 1px solid #f8f8f8;
+  background-color: #fff;
+  align-self: center;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #535258;
   &__logo {
     display: block;
     order: -1;
   }
   &__nameContainer {
     display: flex;
+    align-items: center;
   }
   &__nameTitle {
     margin-left: 10px;
+    font-size: 14px;
+  }
+  &__date {
+    align-self: center;
+    grid-column-start: 3;
+  }
+  &__size {
+    align-self: center;
   }
 }
